@@ -1,0 +1,106 @@
+<?php
+include 'connect.php';
+if (isset($_POST['btnSubmit'])) 
+{
+    $email = $_POST['Email'];
+    $query = "SELECT * FROM tblAdmin WHERE email='$email'";
+    $result = mysqli_query($con, $query);
+    
+    if (mysqli_num_rows($result) > 0) 
+    {
+        $row = mysqli_fetch_assoc($result);
+        $securityQuestion = $row['securityQue'];
+        $securityAnswer = $row['securityAns'];
+
+        header("Location: resetPassword.php?email=$email&secQuestion=" . urlencode($securityQuestion) . "&secAnswer=" . urlencode($securityAnswer));
+        exit();
+    } 
+    else {
+        echo "<script>alert('Email not found');</script>";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Forgot Password</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+     <!-- Open Graph Meta -->
+     <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Sign In Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <h3>Verify User</h3>
+                        </div>
+                        <form action="" id="userForm" method="post">
+                        <div class="form-group mb-3">
+                            <label for="floatingInput">Email</label>
+                            <input type="email" class="form-control" id="floatingInput"
+                            name="Email" placeholder="Enter Your Name">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-4">
+                        </div>
+                        <button type="submit" name="btnSubmit" class="btn btn-primary py-3 w-100 mb-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <!-- Ensure only one version of jQuery is loaded -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#userForm").validate({
+                rules:{
+                    Email:{
+                        required: true,
+                        email: true
+                    }
+                },
+                messages:{
+                    Email:{
+                        required: "Please enter your email address.",
+                        email: "Please enter a valid email address"
+                    }
+                }                
+            });
+        });
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Template Javascript -->
+    <!-- <script src="./assets/js/main.js"></script> -->
+</body>
+</html>

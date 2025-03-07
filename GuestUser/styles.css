@@ -1,0 +1,375 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #040404; /* Dark Spotify background */
+  color: #fff; /* White text */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #fff; /* White text */
+  text-decoration: none;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #1DB954; /* Green Spotify color */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icon {
+  margin-left: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.social-media-icon:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #121212; /* Slightly darker Spotify background */
+}
+
+/* Styles for the header 
+.header {
+  background-color: #191414; /* Dark Spotify background 
+  padding: 1rem;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #fff; /* White text
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1DB954; /* Green Spotify color 
+}
+
+.dropdown {
+  display: none; /* Hide the dropdown menu by default 
+  position: absolute;
+  background-color: #191414; /* Dark Spotify background
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+}
+
+.nav-link:hover .dropdown {
+  display: block; /* Show the dropdown menu on hover 
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown li a {
+  color: #fff; /* White text 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  color: #1DB954; /* Green Spotify color 
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  background-color: #1DB954; /* Green Spotify color 
+  color: #fff; /* White text 
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1ed760; /* Lighter green Spotify color 
+}
+*/
+/* Styles for the main content */
+.main-content {
+  padding: 2rem;
+  background-color: #040404;
+}
+
+/* .image-section {
+  width: 50%;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+} */
+
+.text-section {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  line-height: 1.5;
+}
+
+/* Styles for the services section */
+body {
+  background-color: #040404; /* Dark background similar to Spotify */
+  color: #ffffff; /* White text */
+}
+
+h1, h2 {
+  color: #1a1c1b; /* Spotify green */
+}
+
+.text-muted {
+  color: #b3b3b3; /* Lighter text for contrast */
+}
+
+.service {
+  background-color: #1a1a1a; /* Darker box for each service */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.2s;
+}
+
+.service:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.service-icon {
+  color: #1DB954; /* Icon color */
+}
+
+.services {
+  background-color: #282828; /* Darker Spotify background for the services section */
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.service {
+  background-color: #191414; /* Dark Spotify background for the service */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: #1DB954; /* Green Spotify color */
+  margin-bottom: 1rem;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  line-height: 1.5;
+  color: #a3a3a3; /* Light gray text for the service description */
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group button {
+  background-color: #282828; /* Darker Spotify background for the buttons */
+  color: #fff; /* White text */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #191414; /* Dark Spotify background for the buttons on hover */
+}
+
+.button-group .active {
+  background-color: #e2e2e2; /* Green Spotify color for the active button */
+}
+.product-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+}
+.product-card img {
+  width: 50%;
+  height: 60%;
+  height: auto;
+}
+.product-card .details {
+  padding: 15px;
+}
+.product-card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1db954;
+}
+.product-card p {
+  margin: 10px 0;
+}
+.product-card .price {
+  font-size: 20px;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+.buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1db954;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.buy-button:hover {
+  background-color: #1ed760;
+}
+.book-card {
+  background-color: #121111;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  /* padding: 10px; */
+  width: 90%;
+  height: 50%;
+}
+.book-card img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.book-card .details {
+  flex: 1;
+}
+.book-card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #2fd74e;
+}
+.book-card p {
+  margin: 10px 0;
+}
+.book-card .price {
+  font-size: 18px;
+  color: #e4d7d7;
+}
+.recycle-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2fd74e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.recycle-button:hover {
+  background-color: #16d245e6;
+} 
+.animated-img 
+{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-img:hover 
+{
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); 
+}

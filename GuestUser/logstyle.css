@@ -1,0 +1,192 @@
+:root 
+{
+    --color-grey: #121212ee; /* Dark background similar to Spotify */
+    --color-green: #1aa84c; /* Spotify green 1DB954 */
+    --color-darkgreen: #0b5525; /* dark green */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+}
+body 
+{
+    background-color: var(--color-grey);
+    /* font-family: "Roboto", sans-serif; */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-family: 'Montserrat' !important; /Lato/
+}
+
+.row 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.center 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section 
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 15px;
+    background: var(--color-black); /* Dark background for forms */
+}
+
+.toRight
+{ 
+    animation: slideRight 1.3s ease-in-out forwards;
+}
+
+.toLeft 
+{ 
+    animation: slideLeft 1.3s ease-in-out forwards;
+}
+
+.login-form, 
+.signup-form 
+{
+    width: 400px;
+    height: 500px;
+}
+
+.switch 
+{
+    color: var(--color-white);
+    padding: 20px;
+    position: absolute;
+    left: 15px;
+    height: 500px;
+    width: 330px;
+    background: var(--color-green); /* Highlight color for switch */
+}
+
+.logo 
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    object-fit: fill;
+}
+
+.btn-switch 
+{
+    background: var(--color-green);
+    color: var(--color-black);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    /* margin-top: 20px; */
+    cursor: pointer;
+}
+
+.btn-switch:hover 
+{
+    background: #1aa34a; 
+}
+
+.green 
+{
+    background: var(--color-green);
+}
+
+.form-input 
+{
+    min-width: 250px;
+    height: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    background: var(--color-grey);
+    color: var(--color-white);
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form-input::placeholder 
+{
+    color: #b3b3b3; /* Light gray for placeholders */
+    font-size: medium;
+}
+
+.register-link 
+{
+    margin-inline: 5px;
+    color: var(--color-green);
+    /* text-decoration: underline; */
+    cursor: pointer;
+    margin-top: 20px !important;
+}
+
+@keyframes slideRight 
+{
+    0% 
+    {
+        transform: translateX(0);
+        background: var(--color-green);
+    }
+    100% 
+    {
+        transform: translateX(400px);
+        background: var(--color-darkgreen);
+    }
+}
+
+@keyframes slideLeft 
+{
+    0% 
+    {
+        transform: translateX(400px);
+        background: var(--color-darkgreen);
+    }
+    100% 
+    {
+        transform: translateX(0px);
+        background: var(--color-green);
+    }
+}
+
+.login-form .btn-switch, 
+.signup-form .btn-switch, p 
+{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form-input[type="file"] 
+{
+    min-width: 250px;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 1rem; 
+    background: var(--color-grey); 
+    text-align: top;
+}
+
+.Invalid-input
+{
+    color: red;
+    width: 290px;
+}
